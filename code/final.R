@@ -1,6 +1,6 @@
 rm(list=ls())
 #laoding dataset
-data <- read.csv("C:/Users/Rakes/OneDrive/Desktop/DI/Electric_Vehicle_Population_Data.csv")
+data <- read.csv("C:/Users/OneDrive/Desktop/DI/Electric_Vehicle_Population_Data.csv")
 #cleaning 
 data$CAFV_Eligibility_Short <- ifelse(grepl("Eligible", data$Clean.Alternative.Fuel.Vehicle..CAFV..Eligibility), "Eligible", "Not Eligible/Unknown")
 data <- data[data$Model.Year <= 2023, ]
